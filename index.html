@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>hahaha-井本歯科医院</title>
+    <style>
+        .float-button__wrap {
+            position: fixed;
+            z-index: 20;
+            bottom: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: auto;
+            min-width: 350px;
+            opacity: 1;
+        }
+        img {
+            width:auto;
+            max-width: 100%;
+            min-width: 50%;
+            height: auto;
+        }
+        iframe[src^="https://docs.google.com/forms/d/e"]{
+            width:100%;
+        } 
+    </style>
+    <!-- Microsoft Clarity-->
+    <!-- googleアナリティクス-->
+    <!-- ボタン押下時の動作-->
+    <script>
+        $('#page-link a[href*="#"]').click(function () {
+        var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+        var pos = $(elmHash).offset().top;  //idの上部の距離を取得
+        $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+        return false;
+        });
+    </script>
+    </script>
+</head>
+<body>
+        <!--フローティングボタン-->
+        <div id="button" class="float-button__wrap" >
+            <a href="#iframe">
+            <img alt="サンプル画像です" src="btn_cv.png"></a>
+        </div>
+    <div style="text-align: center" >
+        <p>
+            <img alt="サンプル画像です" src="井本-21.png">
+        </p>
+        <p>
+            <section class="area" id="image2">
+            <img alt="サンプル画像です" src="井本-25.png">
+        </p>
+        <p>
+            <section class="area" id="iframe">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeftTxx2145_6NBvSb5U8KFDChc9Kr5l0E2uIO9iOa2QmsLg/viewform?embedded=true" width="640" height="2928" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        </p>
+    </div> 
+</body>
+</html>
